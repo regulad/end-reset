@@ -75,8 +75,11 @@ public class EndReset {
 
         File levelDat = new File(worldTheEnd, "level.dat");
         levelDat.delete();
+        if (Main.devMode) Main.logger.info("Deleted " + levelDat);
+
         File levelDatOld = new File(worldTheEnd, "level.dat_old");
         levelDatOld.delete();
+        if (Main.devMode) Main.logger.info("Deleted " + levelDatOld);
 
         WorldCreator wcEnd = new WorldCreator(worldName);
         wcEnd.seed((new Random()).nextLong());  // make sure new chunks have a new seed
