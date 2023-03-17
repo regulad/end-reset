@@ -7,6 +7,7 @@ import org.bukkit.entity.Player;
 
 import java.io.File;
 import java.util.Objects;
+import java.util.Random;
 
 public class EndReset {
 
@@ -70,6 +71,7 @@ public class EndReset {
                 }
 
         WorldCreator wcEnd = new WorldCreator(worldName);
+        wcEnd.seed((new Random()).nextLong());  // make sure new chunks have a new seed
         wcEnd.environment(World.Environment.THE_END);
         wcEnd.createWorld();
         if (Main.devMode) Main.logger.info("Loaded " + worldName);
