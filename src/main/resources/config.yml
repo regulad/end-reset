@@ -3,7 +3,7 @@
 world-folder-name: 'world_the_end'
 
 # Whether to reset the world when the plugin starts. Simply change false to true to enable this option.
-reset-on-enable: false
+reset-on-enable: true
 
 # A list of region files to save when resetting the end.
 # DO NOT CHANGE THIS UNLESS YOU KNOW WHAT YOU ARE DOING!
@@ -29,8 +29,8 @@ regions-to-save:
 
 # Plugin settings
 config:
-  plugin-version: '1.0.0'
-  alert-op-on-new-version: true
+  plugin-version: '1.1.0'
+  alert-op-on-new-version: false
   version: 5
   dev-mode: false
-  ignore-warnings: false
+  ignore-warnings: true

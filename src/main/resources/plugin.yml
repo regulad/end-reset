@@ -1,7 +1,7 @@
 name: EndReset
 version: '${project.version}'
 main: me.teakivy.endreset.Main
-api-version: 1.18
+api-version: 1.19
 prefix: ER
 authors: [ TeakIvy ]
 description: Reset the end with a command

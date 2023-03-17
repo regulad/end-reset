@@ -5,10 +5,8 @@ import me.teakivy.endreset.Events.UpdateJoinAlert;
 import me.teakivy.endreset.Utils.ConfigUpdater;
 import me.teakivy.endreset.Utils.EndReset;
 import me.teakivy.endreset.Utils.Metrics.Metrics;
-import me.teakivy.endreset.Utils.UpdateChecker;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.json.simple.parser.ParseException;
 
 import java.io.File;
 import java.io.IOException;
@@ -71,6 +69,7 @@ public final class Main extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new UpdateJoinAlert(), this);
         if (Main.devMode) logger.info("Registered update event");
 
+        /*
         String latestVersion = null;
         try {
             latestVersion = new UpdateChecker(this, 98479).getLatestVersion();
@@ -87,8 +86,9 @@ public final class Main extends JavaPlugin {
             latestVTVersion = latestVersion;
             if (Main.devMode) logger.info("Proposed new version " + latestVersion);
         }
+        */
 
-        Metrics metrics = new Metrics(this, 13640);
+        Metrics metrics = new Metrics(this, 17983);
         registerCustomMetrics(metrics);
         if (Main.devMode) logger.info("Registered Metrics");
 
